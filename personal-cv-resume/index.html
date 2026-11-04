@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vimalkumar M - Computer Science Engineering Student & Frontend Developer. Professional Resume and CV Card Website.">
+  <meta name="author" content="Vimalkumar M">
+  <title>Vimalkumar M | Personal CV & Resume</title>
+  
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="top-nav" id="topNav">
+    <div class="nav-container">
+      <a href="#about" class="brand-logo" aria-label="Vimalkumar M Home">
+        <span class="logo-badge">VM</span>
+        <span class="logo-name">VIMALKUMAR M</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="desktop-menu" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link active">About</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#achievements" class="nav-link">Achievements</a></li>
+          <li><a href="#certifications" class="nav-link">Certifications</a></li>
+          <li><a href="#strengths" class="nav-link">Strengths</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <a href="assets/resume.pdf" download="Vimalkumar_M_Resume.pdf" class="btn btn-primary btn-sm btn-download-nav" id="navDownloadBtn">
+          <i class="fa-solid fa-download"></i>
+          <span>Download CV</span>
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul class="mobile-nav-list">
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#education" class="mobile-nav-link">Education</a></li>
+        <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+        <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+        <li><a href="#achievements" class="mobile-nav-link">Achievements</a></li>
+        <li><a href="#certifications" class="mobile-nav-link">Certifications</a></li>
+        <li><a href="#strengths" class="mobile-nav-link">Strengths</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+      </ul>
+      <div class="mobile-menu-cta">
+        <a href="assets/resume.pdf" download="Vimalkumar_M_Resume.pdf" class="btn btn-primary btn-block">
+          <i class="fa-solid fa-download"></i>
+          <span>Download Resume (PDF)</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Resume Layout Container -->
+  <main class="page-container">
+    <div class="resume-layout">
+
+      <!-- LEFT COLUMN: Profile Card (Sticky / Recruiter Sidebar) -->
+      <aside class="profile-card" id="profileCard">
+        
+        <!-- Profile Image & Interactive Option -->
+        <div class="profile-avatar-container">
+          <div class="avatar-wrapper">
+            <img src="assets/vk .jpg" alt="Vimalkumar M" class="profile-avatar" id="profileAvatar" onerror="this.onerror=null; this.src='assets/profile.jpg';">
+            
+            <!-- Upload Photo Trigger -->
+            <label for="photoUploadInput" class="avatar-upload-btn" title="Add or change profile photo" aria-label="Add or change profile photo">
+              <i class="fa-solid fa-camera"></i>
+            </label>
+            <input type="file" id="photoUploadInput" accept="image/*" class="visually-hidden">
+          </div>
+
+          <!-- Availability Status Badge -->
+          <div class="status-indicator" title="Current Status">
+            <span class="status-dot"></span>
+            <span class="status-text">Open to Opportunities</span>
+          </div>
+        </div>
+
+        <!-- Name & Professional Title -->
+        <div class="profile-header-info">
+          <h1 class="profile-name">VIMALKUMAR M</h1>
+          <p class="profile-title">Computer Science Engineering Student | Frontend Developer</p>
+          <div class="profile-meta">
+            <span class="meta-item"><i class="fa-solid fa-location-dot"></i> Tamil Nadu, India</span>
+            <span class="meta-item"><i class="fa-solid fa-building-columns"></i> Bannari Amman Inst. of Tech</span>
+          </div>
+        </div>
+
+        <!-- Quick Action Buttons -->
+        <div class="profile-actions">
+          <a href="assets/resume.pdf" download="Vimalkumar_M_Resume.pdf" class="btn btn-primary btn-block download-btn" id="sidebarDownloadBtn">
+            <i class="fa-solid fa-file-arrow-down"></i>
+            <span>Download Resume</span>
+          </a>
+          <a href="#contact" class="btn btn-outline btn-block">
+            <i class="fa-solid fa-paper-plane"></i>
+            <span>Get in Touch</span>
+          </a>
+        </div>
+
+        <!-- Photo Reset Option (visible when custom photo loaded) -->
+        <div class="photo-controls" id="photoControls" style="display: none;">
+          <button type="button" class="btn-text-action" id="resetPhotoBtn">
+            <i class="fa-solid fa-arrow-rotate-left"></i> Reset to Default Photo
+          </button>
+        </div>
+
+        <!-- Recruiter Contact Quick-List -->
+        <div class="profile-contact-list">
+          <h2 class="sidebar-heading">Direct Contact</h2>
+          
+          <div class="contact-pill">
+            <div class="contact-pill-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="contact-pill-content">
+              <span class="contact-label">Email</span>
+              <a href="mailto:vimal2004825@gmail.com" class="contact-value text-truncate" title="Send Email">vimal2004825@gmail.com</a>
+            </div>
+            <button class="btn-copy" data-copy="vimal2004825@gmail.com" title="Copy Email" aria-label="Copy Email">
+              <i class="fa-regular fa-copy"></i>
+            </button>
+          </div>
+
+          <div class="contact-pill">
+            <div class="contact-pill-icon"><i class="fa-solid fa-phone"></i></div>
+            <div class="contact-pill-content">
+              <span class="contact-label">Phone</span>
+              <a href="tel:+919655604042" class="contact-value" title="Call Vimalkumar">+91 9655604042</a>
+            </div>
+            <button class="btn-copy" data-copy="9655604042" title="Copy Phone Number" aria-label="Copy Phone Number">
+              <i class="fa-regular fa-copy"></i>
+            </button>
+          </div>
+
+          <div class="contact-pill">
+            <div class="contact-pill-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+            <div class="contact-pill-content">
+              <span class="contact-label">LinkedIn</span>
+              <a href="https://linkedin.com/in/vimalkumar-m-00b23a331" target="_blank" rel="noopener noreferrer" class="contact-value text-truncate">vimalkumar-m-00b23a331</a>
+            </div>
+            <a href="https://linkedin.com/in/vimalkumar-m-00b23a331" target="_blank" rel="noopener noreferrer" class="btn-link-ext" title="Open LinkedIn" aria-label="Open LinkedIn Profile">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+
+          <div class="contact-pill">
+            <div class="contact-pill-icon"><i class="fa-brands fa-github"></i></div>
+            <div class="contact-pill-content">
+              <span class="contact-label">GitHub</span>
+              <a href="https://github.com/VK-vimal123" target="_blank" rel="noopener noreferrer" class="contact-value text-truncate">VK-vimal123</a>
+            </div>
+            <a href="https://github.com/VK-vimal123" target="_blank" rel="noopener noreferrer" class="btn-link-ext" title="Open GitHub" aria-label="Open GitHub Profile">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+
+          <div class="contact-pill">
+            <div class="contact-pill-icon"><i class="fa-solid fa-globe"></i></div>
+            <div class="contact-pill-content">
+              <span class="contact-label">Portfolio</span>
+              <a href="https://github.com/VK-vimal123" target="_blank" rel="noopener noreferrer" class="contact-value text-truncate">Personal Portfolio</a>
+            </div>
+            <a href="https://github.com/VK-vimal123" target="_blank" rel="noopener noreferrer" class="btn-link-ext" title="Open Portfolio" aria-label="Open Portfolio Link">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Summary Metrics -->
+        <div class="profile-metrics">
+          <div class="metric-box">
+            <span class="metric-num">5.63</span>
+            <span class="metric-label">B.E. CGPA</span>
+          </div>
+          <div class="metric-box">
+            <span class="metric-num">3</span>
+            <span class="metric-label">Core Projects</span>
+          </div>
+          <div class="metric-box">
+            <span class="metric-num">6</span>
+            <span class="metric-label">Certificates</span>
+          </div>
+        </div>
+
+        <!-- Social Icons Row -->
+        <div class="profile-social-row">
+          <a href="mailto:vimal2004825@gmail.com" class="social-icon-btn" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          <a href="tel:+919655604042" class="social-icon-btn" title="Phone" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
+          <a href="https://linkedin.com/in/vimalkumar-m-00b23a331" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://github.com/VK-vimal123" target="_blank" rel="noopener noreferrer" class="social-icon-btn" title="GitHub" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        </div>
+
+      </aside>
+
+      <!-- RIGHT COLUMN: Main Content Stream -->
+      <div class="content-stream">
+
+        <!-- SECTION 1: ABOUT ME -->
+        <section id="about" class="content-card section-card">
+          <div class="section-header">
+            <div class="section-icon"><i class="fa-solid fa-user"></i></div>
+            <div class="section-titles">
+              <h2 class="section-title">About Me</h2>
+              <p class="section-subtitle">Professional profile and career orientation</p>
+            </div>
+          </div>
+
+          <div class="about-content">
+            <p class="profile-paragraph">
+              Motivated Computer Science and Engineering student with a strong interest in frontend development and software engineering. Skilled in HTML, CSS, JavaScript, React.js, Python, C, PHP, and MySQL. Experienced in developing responsive web applications, dashboard interfaces, and practical software solutions. Passionate about software engineering, problem solving, and learning modern technologies.
+            </p>
+
+            <!-- Focus Area Highlights -->
+            <div class="focus-grid">
+              <div class="focus-item">
+                <div class="focus-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                <div class="focus-text">
+                  <h3>Frontend Development</h3>
+                  <p>Building responsive, accessible web interfaces using semantic HTML5, CSS3, JavaScript, and React.</p>
+                </div>
+              </div>
+              <div class="focus-item">
+                <div class="focus-icon"><i class="fa-solid fa-database"></i></div>
+                <div class="focus-text">
+                  <h3>Full-Stack & Databases</h3>
+                  <p>Integrating web interfaces with PHP and Flask backends backed by relational MySQL schemas.</p>
+                </div>
+              </div>
+              <div class="focus-item">
+                <div class="focus-icon"><i class="fa-solid fa-brain"></i></div>
+                <div class="focus-text">
+                  <h3>Applied Machine Learning</h3>
+                  <p>Implementing deep learning models with Python, TensorFlow, and Bi-LSTM architectures.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 2: EDUCATION -->
+        <section id="education" class="content-card section-card">
+          <div class="section-header">
+            <div class="section-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="section-titles">
+              <h2 class="section-title">Education</h2>
+              <p class="section-subtitle">Academic background and qualifications</p>
+            </div>
+          </div>
+
+          <div class="timeline">
+            
+            <!-- Education Item 1 -->
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-card">
+                <div class="timeline-card-header">
+                  <div>
+                    <h3 class="timeline-title">Bachelor of Engineering in Computer Science and Engineering</h3>
+                    <p class="timeline-institution">Bannari Amman Institute of Technology</p>
+                  </div>
+                  <div class="timeline-badge-group">
+                    <span class="timeline-date">2023 – 2027</span>
+                    <span class="timeline-score">CGPA: 5.63</span>
+                  </div>
+                </div>
+                <div class="timeline-body">
+                  <p class="timeline-desc">
+                    Pursuing undergraduate engineering with an emphasis on core computing principles, modern web technologies, algorithm design, and software engineering.
+                  </p>
+                  <div class="coursework-tags">
+                    <span class="mini-tag">Data Structures</span>
+                    <span class="mini-tag">Object-Oriented Programming</span>
+                    <span class="mini-tag">DBMS & SQL</span>
+                    <span class="mini-tag">Web Technologies</span>
+                    <span class="mini-tag">Machine Learning</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Education Item 2 -->
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-card">
+                <div class="timeline-card-header">
+                  <div>
+                    <h3 class="timeline-title">Higher Secondary Certificate (HSC)</h3>
+                    <p class="timeline-institution">SKV Matric Higher Secondary School</p>
+                  </div>
+                  <div class="timeline-badge-group">
+                    <span class="timeline-date">2021 – 2023</span>
+                    <span class="timeline-score">Score: 50%</span>
+                  </div>
+                </div>
+                <div class="timeline-body">
+                  <p class="timeline-desc">
+                    Completed higher secondary education covering mathematics, science, and foundational computer science principles.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Education Item 3 -->
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-card">
+                <div class="timeline-card-header">
+                  <div>
+                    <h3 class="timeline-title">Secondary School Leaving Certificate (SSLC)</h3>
+                    <p class="timeline-institution">SKV Matric Higher Secondary School</p>
+                  </div>
+                  <div class="timeline-badge-group">
+                    <span class="timeline-date">2020 – 2021</span>
+                    <span class="timeline-score">Result: Pass</span>
+                  </div>
+                </div>
+                <div class="timeline-body">
+                  <p class="timeline-desc">
+                    Completed secondary schooling with strong foundational fundamentals in science, mathematics, and English communication.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- SECTION 3: TECHNICAL SKILLS -->
+        <section id="skills" class="content-card section-card">
+          <div class="section-header">
+            <div class="section-icon"><i class="fa-solid fa-code"></i></div>
+            <div class="section-titles">
+              <h2 class="section-title">Technical Skills</h2>
+              <p class="section-subtitle">Categorized technical competencies and developer tools</p>
+            </div>
+          </div>
+
+          <div class="skills-categories-grid">
+
+            <!-- Category: Programming -->
+            <div class="skill-category-card">
+              <div class="category-header">
+                <i class="fa-solid fa-terminal category-icon"></i>
+                <h3 class="category-name">Programming</h3>
+              </div>
+              <div class="skill-tags-wrapper">
+                <span class="skill-chip"><i class="fa-solid fa-c"></i> C</span>
+                <span class="skill-chip"><i class="fa-brands fa-python"></i> Python</span>
+                <span class="skill-chip"><i class="fa-brands fa-js"></i> JavaScript</span>
+              </div>
+            </div>
+
+            <!-- Category: Frontend -->
+            <div class="skill-category-card">
+              <div class="category-header">
+                <i class="fa-solid fa-desktop category-icon"></i>
+                <h3 class="category-name">Frontend</h3>
+              </div>
+              <div class="skill-tags-wrapper">
+                <span class="skill-chip"><i class="fa-brands fa-html5"></i> HTML5</span>
+                <span class="skill-chip"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                <span class="skill-chip"><i class="fa-brands fa-square-js"></i> JavaScript (ES6+)</span>
+                <span class="skill-chip"><i class="fa-brands fa-react"></i> React.js</span>
+              </div>
+            </div>
+
+            <!-- Category: Backend -->
+            <div class="skill-category-card">
+              <div class="category-header">
+                <i class="fa-solid fa-server category-icon"></i>
+                <h3 class="category-name">Backend</h3>
+              </div>
+              <div class="skill-tags-wrapper">
+                <span class="skill-chip"><i class="fa-brands fa-php"></i> PHP</span>
+                <span class="skill-chip"><i class="fa-solid fa-network-wired"></i> Flask</span>
+              </div>
+            </div>
+
+            <!-- Category: Database -->
+            <div class="skill-category-card">
+              <div class="category-header">
+                <i class="fa-solid fa-database category-icon"></i>
+                <h3 class="category-name">Database</h3>
+              </div>
+              <div class="skill-tags-wrapper">
+                <span class="skill-chip"><i class="fa-solid fa-table"></i> MySQL</span>
+              </div>
+            </div>
+
+            <!-- Category: Tools & Frameworks -->
+            <div class="skill-category-card full-width-category">
+              <div class="category-header">
+                <i class="fa-solid fa-toolbox category-icon"></i>
+                <h3 class="category-name">Tools & Technologies</h3>
+              </div>
+              <div class="skill-tags-wrapper">
+                <span class="skill-chip"><i class="fa-solid fa-bolt"></i> Vite</span>
+                <span class="skill-chip"><i class="fa-solid fa-wind"></i> Tailwind CSS</span>
+                <span class="skill-chip"><i class="fa-solid fa-microchip"></i> TensorFlow</span>
+                <span class="skill-chip"><i class="fa-brands fa-git-alt"></i> Git</span>
+                <span class="skill-chip"><i class="fa-brands fa-github"></i> GitHub</span>
+                <span class="skill-chip"><i class="fa-solid fa-laptop-code"></i> VS Code</span>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- SECTION 4: PROJECTS -->
+        <section id="projects" class="content-card section-card">
+          <div class="section-header">
+            <div class="section-icon"><i class="fa-solid fa-folder-open"></i></div>
+            <div class="section-titles">
+              <h2 class="section-title">Projects</h2>
+              <p class="section-subtitle">Selected academic and practical engineering implementations</p>
+            </div>
+          </div>
+
+          <div class="projects-list">
+
+            <!-- Project 1 -->
+            <article class="project-card">
+              <div class="project-card-header">
+                <div class="project-title-area">
+                  <span class="project-number">01</span>
+                  <div>
+                    <h3 class="project-title">Emotion Detection from Text using Bi-LSTM</h3>
+                    <p class="project-nature">Deep Learning & Web Application</p>
+                  </div>
+                </div>
+                <div class="project-tech-badges">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Flask</span>
+                  <span class="tech-tag">TensorFlow</span>
+                </div>
+              </div>
+              <div class="project-card-body">
+                <ul class="project-points">
+                  <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Developed an intelligent text emotion classification system utilizing Bidirectional Long Short-Term Memory (Bi-LSTM) neural network architecture.</span>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Built an intuitive and responsive web interface that enables users to test emotion predictions across real-time textual inputs.</span>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Integrated the trained deep learning model with a lightweight Flask backend REST API for seamless inference.</span>
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Project 2 -->
+            <article class="project-card">
+              <div class="project-card-header">
+                <div class="project-title-area">
+                  <span class="project-number">02</span>
+                  <div>
+                    <h3 class="project-title">Nimbus Admin Dashboard</h3>
+                    <p class="project-nature">Frontend Architecture & Data Visualization</p>
+                  </div>
+                </div>
+                <div class="project-tech-badges">
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">Vite</span>
+                  <span class="tech-tag">Tailwind CSS</span>
+                </div>
+              </div>
+              <div class="project-card-body">
+                <ul class="project-points">
+                  <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Built a responsive admin dashboard equipped with dynamic analytics, KPIs, and interactive visual charts.</span>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Developed modular and reusable React components with fluid layouts conforming to modern web standards.</span>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Designed a modern, recruiter-friendly user interface focused on high usability, clean contrast, and accessibility.</span>
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Project 3 -->
+            <article class="project-card">
+              <div class="project-card-header">
+                <div class="project-title-area">
+                  <span class="project-number">03</span>
+                  <div>
+                    <h3 class="project-title">Social Learning Notes Exchange</h3>
+                    <p class="project-nature">Full-Stack Academic Collaboration Platform</p>
+                  </div>
+                </div>
+                <div class="project-tech-badges">
+                  <span class="tech-tag">HTML</span>
+                  <span class="tech-tag">CSS</span>
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">PHP</span>
+                  <span class="tech-tag">MySQL</span>
+                </div>
+              </div>
+              <div class="project-card-body">
+                <ul class="project-points">
+                  <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Developed a collaborative academic platform allowing college students to upload, download, and share study notes and course resources.</span>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Implemented user authentication, multi-format file uploads, category-based search, star ratings, and community comment discussions.</span>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Employed PHP and structured MySQL relational databases for secure backend operations and data management.</span>
+                  </li>
+                </ul>
+                <div class="project-card-footer">
+                  <a href="https://github.com/VK-vimal123/Social-Learning-Frontend" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                    <i class="fa-brands fa-github"></i>
+                    <span>View Repository on GitHub</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square icon-small"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <!-- SECTION 5: CONFERENCE & ACHIEVEMENTS -->
+        <section id="achievements" class="content-card section-card">
+          <div class="section-header">
+            <div class="section-icon"><i class="fa-solid fa-award"></i></div>
+            <div class="section-titles">
+              <h2 class="section-title">Conference & Achievements</h2>
+              <p class="section-subtitle">Research presentations and technical competitive milestones</p>
+            </div>
+          </div>
+
+          <div class="achievements-grid">
+
+            <!-- Conference Card -->
+            <div class="achievement-card">
+              <div class="achievement-badge">
+                <i class="fa-solid fa-file-lines"></i>
+                <span>Conference & Paper Presentation</span>
+              </div>
+              <h3 class="achievement-heading">NEURONIX’26 – National Level Conference</h3>
+              <p class="achievement-topic">
+                <strong>Research Paper:</strong> “Artificial Intelligence in Signal Processing”
+              </p>
+              <p class="achievement-org">
+                <i class="fa-solid fa-building-columns"></i> Organized by Mailam Engineering College
+              </p>
+              <p class="achievement-time">
+                <i class="fa-regular fa-calendar"></i> March 2026
+              </p>
+              <p class="achievement-details">
+                Presented research work at the National-Level Conference on Next-Generation Electronics, Circuits & Intelligent Signal Systems, focusing on modern AI techniques for signal transformation and intelligent systems.
+              </p>
+            </div>
+
+            <!-- Achievement Card -->
+            <div class="achievement-card">
+              <div class="achievement-badge">
+                <i class="fa-solid fa-trophy"></i>
+                <span>National Challenge</span>
+              </div>
+              <h3 class="achievement-heading">The Data Decode Challenge</h3>
+              <p class="achievement-topic">
+                <strong>Track:</strong> Insight Extraction Sprint
+              </p>
+              <p class="achievement-org">
+                <i class="fa-solid fa-landmark"></i> Indian Institute of Science (IISc), Bangalore
+              </p>
+              <p class="achievement-time">
+                <i class="fa-solid fa-globe"></i> Conducted through Unstop Platform
+              </p>
+              <p class="achievement-details">
+                Participated in an intensive data reasoning sprint hosted by IISc Bangalore, demonstrating structured problem formulation, data processing, and analytical insight extraction.
+              </p>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- SECTION 6: CERTIFICATIONS -->
+        <section id="certifications" class="content-card section-card">
+          <div class="section-header">
+            <div class="section-icon"><i class="fa-solid fa-certificate"></i></div>
+            <div class="section-titles">
+              <h2 class="section-title">Certifications</h2>
+              <p class="section-subtitle">Verified professional credentials and technical assessments</p>
+            </div>
+          </div>
+
+          <div class="certifications-grid">
+
+            <!-- Cert 1 -->
+            <div class="cert-card">
+              <div class="cert-icon-box"><i class="fa-brands fa-microsoft"></i></div>
+              <div class="cert-info">
+                <h3 class="cert-title">Introduction to Generative AI and Agents</h3>
+                <p class="cert-issuer">Microsoft</p>
+                <span class="cert-date"><i class="fa-regular fa-calendar-check"></i> June 2026</span>
+              </div>
+            </div>
+
+            <!-- Cert 2 -->
+            <div class="cert-card">
+              <div class="cert-icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+              <div class="cert-info">
+                <h3 class="cert-title">Cybersecurity</h3>
+                <p class="cert-issuer">Skill India Digital Hub & Tech Mahindra Foundation</p>
+                <span class="cert-date"><i class="fa-regular fa-calendar-check"></i> March 2026</span>
+              </div>
+            </div>
+
+            <!-- Cert 3 -->
+            <div class="cert-card">
+              <div class="cert-icon-box"><i class="fa-solid fa-code"></i></div>
+              <div class="cert-info">
+                <h3 class="cert-title">JavaScript</h3>
+                <p class="cert-issuer">Infosys Springboard</p>
+                <span class="cert-date"><i class="fa-regular fa-calendar-check"></i> February 2026</span>
+              </div>
+            </div>
+
+            <!-- Cert 4 -->
+            <div class="cert-card">
+              <div class="cert-icon-box"><i class="fa-brands fa-hackerrank"></i></div>
+              <div class="cert-info">
+                <h3 class="cert-title">Python (Basic)</h3>
+                <p class="cert-issuer">HackerRank</p>
+                <span class="cert-date"><i class="fa-regular fa-circle-check"></i> Verified Assessment</span>
+              </div>
+            </div>
+
+            <!-- Cert 5 -->
+            <div class="cert-card">
+              <div class="cert-icon-box"><i class="fa-solid fa-database"></i></div>
+              <div class="cert-info">
+                <h3 class="cert-title">SQL (Basic)</h3>
+                <p class="cert-issuer">HackerRank</p>
+                <span class="cert-date"><i class="fa-regular fa-calendar-check"></i> January 2026</span>
+              </div>
+            </div>
+
+            <!-- Cert 6 -->
+            <div class="cert-card">
+              <div class="cert-icon-box"><i class="fa-solid fa-network-wired"></i></div>
+              <div class="cert-info">
+                <h3 class="cert-title">Internet of Things (IoT)</h3>
+                <p class="cert-issuer">UpSkill</p>
+                <span class="cert-date"><i class="fa-regular fa-calendar-check"></i> April 2025</span>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- SECTION 7: STRENGTHS -->
+        <section id="strengths" class="content-card section-card">
+          <div class="section-header">
+            <div class="section-icon"><i class="fa-solid fa-star"></i></div>
+            <div class="section-titles">
+              <h2 class="section-title">Core Strengths</h2>
+              <p class="section-subtitle">Professional attributes and workplace capabilities</p>
+            </div>
+          </div>
+
+          <div class="strengths-grid">
+
+            <div class="strength-card">
+              <div class="strength-icon"><i class="fa-solid fa-lightbulb"></i></div>
+              <h3 class="strength-name">Problem Solving</h3>
+              <p class="strength-desc">Structured analytical reasoning to decompose complex requirements into efficient, testable software solutions.</p>
+            </div>
+
+            <div class="strength-card">
+              <div class="strength-icon"><i class="fa-solid fa-users"></i></div>
+              <h3 class="strength-name">Teamwork</h3>
+              <p class="strength-desc">Effective peer collaboration, actively participating in team code reviews, Git branching, and agile sprints.</p>
+            </div>
+
+            <div class="strength-card">
+              <div class="strength-icon"><i class="fa-solid fa-bolt"></i></div>
+              <h3 class="strength-name">Quick Learner</h3>
+              <p class="strength-desc">High learning agility with a self-driven track record of mastering modern frameworks, tooling, and libraries.</p>
+            </div>
+
+            <div class="strength-card">
+              <div class="strength-icon"><i class="fa-solid fa-comments"></i></div>
+              <h3 class="strength-name">Communication</h3>
+              <p class="strength-desc">Clear technical communication demonstrated through national conference research presentation and academic demonstrations.</p>
+            </div>
+
+            <div class="strength-card">
+              <div class="strength-icon"><i class="fa-solid fa-arrows-rotate"></i></div>
+              <h3 class="strength-name">Adaptability</h3>
+              <p class="strength-desc">Comfortable shifting between frontend interfaces, backend endpoints, and machine learning pipelines as project needs evolve.</p>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- SECTION 8: CONTACT -->
+        <section id="contact" class="content-card section-card">
+          <div class="section-header">
+            <div class="section-icon"><i class="fa-solid fa-address-book"></i></div>
+            <div class="section-titles">
+              <h2 class="section-title">Get in Touch</h2>
+              <p class="section-subtitle">Direct channels for recruitment and professional collaboration</p>
+            </div>
+          </div>
+
+          <div class="contact-cards-grid">
+
+            <!-- Email Card -->
+            <div class="contact-method-card">
+              <div class="method-icon-circle"><i class="fa-solid fa-envelope"></i></div>
+              <div class="method-details">
+                <span class="method-type">Email Address</span>
+                <a href="mailto:vimal2004825@gmail.com" class="method-main-link">vimal2004825@gmail.com</a>
+                <span class="method-note">Available for interviews & formal correspondence</span>
+              </div>
+              <div class="method-actions">
+                <a href="mailto:vimal2004825@gmail.com" class="btn btn-sm btn-outline">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Send Email
+                </a>
+                <button type="button" class="btn btn-sm btn-subtle btn-copy" data-copy="vimal2004825@gmail.com">
+                  <i class="fa-regular fa-copy"></i> Copy
+                </button>
+              </div>
+            </div>
+
+            <!-- Phone Card -->
+            <div class="contact-method-card">
+              <div class="method-icon-circle"><i class="fa-solid fa-phone"></i></div>
+              <div class="method-details">
+                <span class="method-type">Phone Number</span>
+                <a href="tel:+919655604042" class="method-main-link">+91 9655604042</a>
+                <span class="method-note">Available during standard business hours</span>
+              </div>
+              <div class="method-actions">
+                <a href="tel:+919655604042" class="btn btn-sm btn-outline">
+                  <i class="fa-solid fa-phone-volume"></i> Call
+                </a>
+                <button type="button" class="btn btn-sm btn-subtle btn-copy" data-copy="9655604042">
+                  <i class="fa-regular fa-copy"></i> Copy
+                </button>
+              </div>
+            </div>
+
+            <!-- LinkedIn Card -->
+            <div class="contact-method-card">
+              <div class="method-icon-circle"><i class="fa-brands fa-linkedin-in"></i></div>
+              <div class="method-details">
+                <span class="method-type">LinkedIn Profile</span>
+                <a href="https://linkedin.com/in/vimalkumar-m-00b23a331" target="_blank" rel="noopener noreferrer" class="method-main-link">linkedin.com/in/vimalkumar-m-00b23a331</a>
+                <span class="method-note">Connect for recommendations & career updates</span>
+              </div>
+              <div class="method-actions">
+                <a href="https://linkedin.com/in/vimalkumar-m-00b23a331" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Profile
+                </a>
+              </div>
+            </div>
+
+            <!-- GitHub Card -->
+            <div class="contact-method-card">
+              <div class="method-icon-circle"><i class="fa-brands fa-github"></i></div>
+              <div class="method-details">
+                <span class="method-type">GitHub Profile</span>
+                <a href="https://github.com/VK-vimal123" target="_blank" rel="noopener noreferrer" class="method-main-link">github.com/VK-vimal123</a>
+                <span class="method-note">Explore public code repositories, commits & projects</span>
+              </div>
+              <div class="method-actions">
+                <a href="https://github.com/VK-vimal123" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> View GitHub
+                </a>
+              </div>
+            </div>
+
+            <!-- Portfolio Card -->
+            <div class="contact-method-card">
+              <div class="method-icon-circle"><i class="fa-solid fa-globe"></i></div>
+              <div class="method-details">
+                <span class="method-type">Online Portfolio</span>
+                <a href="https://github.com/VK-vimal123" target="_blank" rel="noopener noreferrer" class="method-main-link">VK-vimal123 Project Hub</a>
+                <span class="method-note">Interactive project demos & code repositories</span>
+              </div>
+              <div class="method-actions">
+                <a href="https://github.com/VK-vimal123" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Portfolio
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Website Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <p class="footer-author"><strong>Vimalkumar M</strong> &mdash; Computer Science Engineering Student | Frontend Developer</p>
+        <p class="footer-copy">&copy; <span id="currentYear">2026</span> Vimalkumar M. All rights reserved. Designed for Task 2 CV / Resume Card Submission.</p>
+      </div>
+      <div class="footer-right">
+        <ul class="footer-nav">
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top of page" title="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Toast Notification Popup -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- Custom Vanilla JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
+
